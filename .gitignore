@@ -8,3 +8,7 @@
 #Intellij Project Files
 .idea
 *.iml
+
+#Gradle
+.gradle
+build/
