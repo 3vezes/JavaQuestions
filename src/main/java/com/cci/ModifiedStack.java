@@ -1,4 +1,4 @@
-package com.cci;
+package main.java.com.cci;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

@@ -1,6 +1,7 @@
-package com.cci;
+package test.java.com.cci;
 
-import com.data.tree.BinaryNode;
+import main.java.com.cci.TreeUtil;
+import main.java.com.data.tree.BinaryNode;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

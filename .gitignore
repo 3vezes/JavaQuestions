@@ -8,3 +8,9 @@
 #Intellij Project Files
 .idea
 *.iml
+*.ipr
+*.iws
+
+#Gradle
+.gradle
+build/

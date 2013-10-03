@@ -1,4 +1,4 @@
-package com.data.tree;
+package main.java.com.data.tree;
 
 public class BinaryNode<T> {
 

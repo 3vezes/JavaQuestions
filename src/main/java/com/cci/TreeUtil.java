@@ -1,6 +1,6 @@
-package com.cci;
+package main.java.com.cci;
 
-import com.data.tree.BinaryNode;
+import main.java.com.data.tree.BinaryNode;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Ordering;
 
