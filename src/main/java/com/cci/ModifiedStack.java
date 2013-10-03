@@ -1,4 +1,4 @@
-package main.java.com.cci;
+package com.cci;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -12,8 +12,8 @@ import static com.google.common.base.Preconditions.checkState;
  */
 public class ModifiedStack implements Stack<Integer>{
 
-    private final Deque<Integer> container = new ArrayDeque<>();
-    private final Deque<Integer> currentMin = new ArrayDeque<>();
+    private final Deque<Integer> container = new ArrayDeque<Integer>();
+    private final Deque<Integer> currentMin = new ArrayDeque<Integer>();
 
     @Override
     public void push(Integer item) {

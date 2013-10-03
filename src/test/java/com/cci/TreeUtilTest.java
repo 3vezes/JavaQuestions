@@ -1,7 +1,6 @@
-package test.java.com.cci;
+package com.cci;
 
-import main.java.com.cci.TreeUtil;
-import main.java.com.data.tree.BinaryNode;
+import com.data.tree.BinaryNode;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,23 +21,23 @@ public class TreeUtilTest {
     }
 
     private BinaryNode<Integer> createBinarySearchTree() {
-        BinaryNode<Integer> fiveNode = new BinaryNode<>(5);
-        BinaryNode<Integer> fourNode = new BinaryNode<>(null,fiveNode,4);
-        BinaryNode<Integer> nineNode = new BinaryNode<>(9);
-        BinaryNode<Integer> eightNode = new BinaryNode<>(fourNode,nineNode,8);
-        BinaryNode<Integer> elevenNode = new BinaryNode<>(11);
-        BinaryNode<Integer> twelveNode = new BinaryNode<>(elevenNode,null,12);
-        return new BinaryNode<>(eightNode,twelveNode,10);
+        BinaryNode<Integer> fiveNode = new BinaryNode<Integer>(5);
+        BinaryNode<Integer> fourNode = new BinaryNode<Integer>(null,fiveNode,4);
+        BinaryNode<Integer> nineNode = new BinaryNode<Integer>(9);
+        BinaryNode<Integer> eightNode = new BinaryNode<Integer>(fourNode,nineNode,8);
+        BinaryNode<Integer> elevenNode = new BinaryNode<Integer>(11);
+        BinaryNode<Integer> twelveNode = new BinaryNode<Integer>(elevenNode,null,12);
+        return new BinaryNode<Integer>(eightNode,twelveNode,10);
     }
 
     private BinaryNode<Integer> createBinaryTree() {
-        BinaryNode<Integer> tenNode = new BinaryNode<>(10);
-        BinaryNode<Integer> twelveNode = new BinaryNode<>(tenNode,null,12);
-        BinaryNode<Integer> eightNode = new BinaryNode<>(8);
-        BinaryNode<Integer> nineNode = new BinaryNode<>(eightNode,twelveNode,9);
-        BinaryNode<Integer> elevenNode = new BinaryNode<>(11);
-        BinaryNode<Integer> fourNode = new BinaryNode<>(elevenNode,null,4);
-        return new BinaryNode<>(nineNode,fourNode,5);
+        BinaryNode<Integer> tenNode = new BinaryNode<Integer>(10);
+        BinaryNode<Integer> twelveNode = new BinaryNode<Integer>(tenNode,null,12);
+        BinaryNode<Integer> eightNode = new BinaryNode<Integer>(8);
+        BinaryNode<Integer> nineNode = new BinaryNode<Integer>(eightNode,twelveNode,9);
+        BinaryNode<Integer> elevenNode = new BinaryNode<Integer>(11);
+        BinaryNode<Integer> fourNode = new BinaryNode<Integer>(elevenNode,null,4);
+        return new BinaryNode<Integer>(nineNode,fourNode,5);
     }
 
     @Test

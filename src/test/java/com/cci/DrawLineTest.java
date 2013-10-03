@@ -1,4 +1,4 @@
-package test.java.com.cci;
+package com.cci;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -20,7 +20,7 @@ public class DrawLineTest {
 
     @Test
     public void testDrawHorizontalLine() throws Exception {
-        byte[] results = DrawLine.drawHorizontalLine(TEST_DATA,4,0,3,2);
+        byte[] results = DrawLine.drawHorizontalLine(TEST_DATA, 4, 0, 3, 2);
         Assert.assertArrayEquals(EXPECTED_DATA,results);
     }
 }

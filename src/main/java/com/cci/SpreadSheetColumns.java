@@ -1,4 +1,4 @@
-package main.java.com.cci;
+package com.cci;
 
 import com.google.common.base.Preconditions;
 

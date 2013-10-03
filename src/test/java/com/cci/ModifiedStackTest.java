@@ -1,4 +1,4 @@
-package test.java.com.cci;
+package com.cci;
 
 import junit.framework.Assert;
 import org.junit.Before;
