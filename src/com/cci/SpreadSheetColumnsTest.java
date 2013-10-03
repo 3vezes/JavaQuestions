@@ -1,3 +1,5 @@
+package com.cci;
+
 import org.junit.Assert;
 import org.junit.Test;
 
