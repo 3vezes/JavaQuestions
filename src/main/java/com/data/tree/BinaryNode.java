@@ -19,11 +19,11 @@ public class BinaryNode<T> {
         this.value = value;
     }
 
-    public BinaryNode getLeft() {
+    public BinaryNode<T> getLeft() {
         return left;
     }
 
-    public BinaryNode getRight() {
+    public BinaryNode<T> getRight() {
         return right;
     }
 
