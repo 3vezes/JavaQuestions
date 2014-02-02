@@ -73,7 +73,6 @@ public class BinaryTreePathSum {
     /**
      * Returns a collection of paths which equal the target sum.
      *
-     * @return
      */
     public static Set<Path> getPathsToSum(BinaryNode<Integer> startingNode, int targetSum) {
         Set<Path> results = Sets.newHashSet();
