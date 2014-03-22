@@ -1,6 +1,6 @@
 package com.cci;
 
-import com.data.tree.BinaryNode;
+import com.data.BinaryNode;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Ordering;
 

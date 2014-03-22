@@ -1,6 +1,6 @@
 package com.cci;
 
-import com.data.tree.BinaryNode;
+import com.data.BinaryNode;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
