@@ -26,4 +26,24 @@ public class LinkedListElement<T> {
     public LinkedListElement<T> getNext() {
         return next;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        LinkedListElement that = (LinkedListElement) o;
+
+        if (data != null ? !data.equals(that.data) : that.data != null) return false;
+        if (next != null ? !next.equals(that.next) : that.next != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = data != null ? data.hashCode() : 0;
+        result = 31 * result + (next != null ? next.hashCode() : 0);
+        return result;
+    }
 }
