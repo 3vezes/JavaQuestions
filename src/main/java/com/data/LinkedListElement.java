@@ -46,4 +46,12 @@ public class LinkedListElement<T> {
         result = 31 * result + (next != null ? next.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "LinkedListElement{" +
+                "data=" + data +
+                ", next=" + next +
+                '}';
+    }
 }
