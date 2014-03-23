@@ -2,8 +2,8 @@ package com.data;
 
 public class BinaryNode<T> {
 
-    private final BinaryNode left;
-    private final BinaryNode right;
+    private BinaryNode left;
+    private BinaryNode right;
 
     private final T value;
 
@@ -25,6 +25,14 @@ public class BinaryNode<T> {
 
     public BinaryNode<T> getRight() {
         return right;
+    }
+
+    public void setLeft(BinaryNode left) {
+        this.left = left;
+    }
+
+    public void setRight(BinaryNode right) {
+        this.right = right;
     }
 
     public T getValue() {
