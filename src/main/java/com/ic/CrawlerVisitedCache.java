@@ -16,6 +16,9 @@ import java.util.Map;
  */
 public class CrawlerVisitedCache {
 
+    private static final char URL_TERMINATOR = '*';
+    private static final Node<Character> TERMINATING_NODE = new Node<Character>(URL_TERMINATOR);
+
     /**
      * Key is the first char of the URL and the value is the trie struct.
      */
@@ -24,7 +27,7 @@ public class CrawlerVisitedCache {
     public boolean hasUrl(String url){
         char first = url.charAt(0);
 
-        return trieURLMap.containsKey(first) && recursiveTraverse(advanceNextCharacter(url), trieURLMap.get(first));
+        return trieURLMap.containsKey(first) && recursiveTraverse(advanceNextCharacter(url + URL_TERMINATOR), trieURLMap.get(first));
     }
 
     public void addUrl(String url){
@@ -35,7 +38,8 @@ public class CrawlerVisitedCache {
             trieURLMap.put(firstCharacter,new Node<Character>(firstCharacter));
         }
 
-        recursiveInsert(advanceNextCharacter(url),trieURLMap.get(firstCharacter));
+        //Append the terminator each to URL given.
+        recursiveInsert(advanceNextCharacter(url + URL_TERMINATOR),trieURLMap.get(firstCharacter));
     }
 
     private void recursiveInsert(String url,Node<Character> node){
@@ -54,7 +58,7 @@ public class CrawlerVisitedCache {
     }
 
     private boolean recursiveTraverse(String url, Node<Character> node){
-        if(url.isEmpty()){
+        if(TERMINATING_NODE.equals(node)){
             //We traversed all nodes and reached the end.
             return true;
         }

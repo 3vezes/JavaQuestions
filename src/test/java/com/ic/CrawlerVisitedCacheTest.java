@@ -12,7 +12,8 @@ public class CrawlerVisitedCacheTest {
     private List<String> sampleURLList = Lists.newArrayList("donut.net","dogood.org",
                                                             "dog.com","dog.com/about",
                                                             "dog.com/pug","dog.org",
-                                                            "ericrgon.com","google.com");
+                                                            "ericrgon.com/android","ericrgon.com",
+                                                            "google.com");
     private CrawlerVisitedCache crawlerVisitedCache;
 
     @Before
@@ -36,5 +37,8 @@ public class CrawlerVisitedCacheTest {
         for(String current : sampleURLList){
             Assert.assertFalse(crawlerVisitedCache.hasUrl(current + current));
         }
+
+        //Check for partial URLs
+        Assert.assertFalse(crawlerVisitedCache.hasUrl("ericrgo"));
     }
 }
