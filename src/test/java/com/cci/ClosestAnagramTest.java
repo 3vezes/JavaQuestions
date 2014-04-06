@@ -34,6 +34,6 @@ public class ClosestAnagramTest {
 
     @Test
     public void testAnagramSort() throws Exception {
-        Assert.assertEquals(sortedAnagrams,ClosestAnagram.sort(unsortedAnagrams));        
+        Assert.assertEquals(sortedAnagrams,ClosestAnagram.sort(unsortedAnagrams));
     }
 }
