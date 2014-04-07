@@ -22,6 +22,10 @@ public class Node<T> {
         children.add(new Node<T>(child));
     }
 
+    public void addChild(Node<T> child){
+        children.add(child);
+    }
+
     public List<Node<T>> getChildren() {
         return Lists.newArrayList(children);
     }
