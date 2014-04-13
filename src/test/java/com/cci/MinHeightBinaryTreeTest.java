@@ -21,7 +21,7 @@ public class MinHeightBinaryTreeTest {
             int targetTreeSize = (int) Math.pow(2,i);
             int expectedHeight = IntMath.log2(targetTreeSize, RoundingMode.UP) + 1;
 
-            Range range = Range.openClosed(0,targetTreeSize);
+            Range<Integer> range = Range.openClosed(0,targetTreeSize);
             List<Integer> sortedList = Lists.newArrayList(ContiguousSet.create(range, DiscreteDomain.integers()));
             BinaryNode<Integer> root = MinHeightBinaryTree.createBalanced(sortedList);
             Assert.assertEquals(expectedHeight, TreeHeight.findHeight(root));
