@@ -24,7 +24,7 @@ public class LongestIncreasingSequences {
             int targetPile = Collections.binarySearch(piles,newPile);
 
             if(targetPile < 0){
-                //Search was not successful but we have an ~ insertion point
+                //Search was not successful. Binary search return ~(insertion -1)
                 targetPile = ~targetPile;
             }
 
@@ -38,15 +38,17 @@ public class LongestIncreasingSequences {
             if(targetPile >= 1){
                 prediction[targetPile -1] = piles.get(targetPile-1).peek();
             }
-
-
         }
 
+
+        /**
+         * Back trace for path.
+         * Property of the patience algorithm. The LIS will be
+         * equal to # of pile.
+         */
         List<Integer> results = Lists.newArrayList();
-        for(int current : prediction){
-            if(current > 0){
-                results.add(current);
-            }
+        for(int i = 0 ; i < piles.size() ; i++){
+            results.add(prediction[i]);
         }
 
         return results;
