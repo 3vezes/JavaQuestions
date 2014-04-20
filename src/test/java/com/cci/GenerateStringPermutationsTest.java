@@ -6,13 +6,13 @@ import org.junit.Test;
 
 import java.util.List;
 
-public class StringPermutationsTest {
+public class GenerateStringPermutationsTest {
 
     @Test
     public void testPermutations() throws Exception {
         List<String> expectedLists = Lists.newArrayList("abc", "acb",
                                                         "bac", "bca",
                                                         "cab","cba");
-        Assert.assertEquals(StringPermutations.permutations("abc"), expectedLists);
+        Assert.assertEquals(GenerateStringPermutations.permutations("abc"), expectedLists);
     }
 }

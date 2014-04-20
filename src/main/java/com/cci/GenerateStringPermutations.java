@@ -4,7 +4,7 @@ import com.google.common.collect.Lists;
 
 import java.util.List;
 
-public final class StringPermutations {
+public final class GenerateStringPermutations {
 
     public static List<String> permutations(String input) {
         char[] characters = input.toCharArray();
