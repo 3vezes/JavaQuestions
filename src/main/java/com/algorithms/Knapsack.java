@@ -27,6 +27,12 @@ public class Knapsack {
         }
     }
 
+    /**
+     * Knapsack where each item can only be included once.
+     * @param items
+     * @param targetWeight
+     * @return
+     */
     public static int getBoundedMaxWeight(List<Item> items, int targetWeight) {
         int totalItems = items.size();
         int[][] prediction = new int[items.size() + 1][targetWeight + 1];
@@ -46,18 +52,23 @@ public class Knapsack {
         return prediction[totalItems][targetWeight];
     }
 
+    /**
+     * Knapsack that allow repetition of a single element.
+     * @param items
+     * @param targetWeight
+     * @return
+     */
     public static int getUnboundedMaxWeight(List<Item> items, int targetWeight) {
         int[] k = new int[targetWeight + 1];
 
         k[0] = 0;
-        for (int w = 1; w <= targetWeight; w++) {
+            for (int w = 1; w <= targetWeight; w++) {
             int max = 0;
 
-            for(int i = 0 ; i < items.size() ; i++){
-                Item current = items.get(i);
-                if(current.weight <= w){
-                    int currentValue = k[w - items.get(i).weight] + current.value;
-                    if(currentValue > max){
+            for (Item current : items) {
+                if (current.weight <= w) {
+                    int currentValue = k[w - current.weight] + current.value;
+                    if (currentValue > max) {
                         max = currentValue;
                     }
                 }

@@ -10,7 +10,7 @@ import java.util.List;
 public class KnapsackTest {
 
     @Test
-    public void testUnbounded() throws Exception {
+    public void testKnapsack() throws Exception {
         List<Knapsack.Item> items = Lists.newArrayList();
         items.add(Knapsack.Item.newInstance(6,30));
         items.add(Knapsack.Item.newInstance(3,14));
